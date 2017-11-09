@@ -16,10 +16,13 @@ def render_response():
     return render_template('home.html', options = get_state_options(),response = your_interesting_demographic_function2(state))
 def get_state_options():
     options = ""
-    state = ""
+    state = []
     for c in counties
-        
-
+        if not c["State"] in state:
+              state.append(c["State"])
+    for s in state:
+       options += Markup("<option value=\"" + s + "\">" + s + "</option>")
+    return options
 def your_interesting_demographic_function(stateName):
 
 if __name__=="__main__":
