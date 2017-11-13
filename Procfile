@@ -1,1 +1,1 @@
-web: gunicorn CountyDemographicsUnfinished:app --log-file=-
+web: gunicorn webapp:app --log-file=-
