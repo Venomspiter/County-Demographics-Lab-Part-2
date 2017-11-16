@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/home")
 def render_response():
     state = request.args["states"]
-    return render_template('home.html')
+    return render_template('home.html',options = get_state_options(),response = your_interesting_demographic_function2(state))
 def get_state_options():
     options = ""
     with open('county_demographics.json') as demographics_data:
