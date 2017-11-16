@@ -23,6 +23,6 @@ def your_interesting_demographic_function(stateName):
 
 @app.route("/")
 def render_main():
-    return render_template('home.html') 
+    return render_template('home.html',options = get_state_options())
 if __name__=="__main__":
     app.run(debug=False, port=54321)
