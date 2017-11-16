@@ -19,8 +19,10 @@ def get_state_options():
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 def your_interesting_demographic_function(stateName):
-return ["Age"]["Percent Under 18 Years"]
-
+    with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)
+    for c in counties:
+        if c["state"] in state
 @app.route("/")
 def render_main():
     return render_template('home.html',options = get_state_options())
