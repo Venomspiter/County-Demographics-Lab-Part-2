@@ -19,7 +19,7 @@ def get_state_options():
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 def your_interesting_demographic_function(stateName):
-       return "hi"
+return ["Age"]["Percent Under 18 Years"]
 
 @app.route("/")
 def render_main():
