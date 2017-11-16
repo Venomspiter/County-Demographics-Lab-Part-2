@@ -18,8 +18,8 @@ def get_state_options():
     for s in state:
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
-"""def your_interesting_demographic_function(stateName):
-       return "hi"""
+def your_interesting_demographic_function(stateName):
+       return "hi"
 
 @app.route("/")
 def render_main():
