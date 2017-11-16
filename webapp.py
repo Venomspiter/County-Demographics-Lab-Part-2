@@ -12,11 +12,11 @@ def get_state_options():
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
     state = []
-    """for c in counties
+    for c in counties
         if not c["State"] in state:
               state.append(c["State"])
     for s in state:
-       options += Markup("<option value=\"" + s + "\">" + s + "</option>")"""
+       options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 """def your_interesting_demographic_function(stateName):
        return "hi"""
