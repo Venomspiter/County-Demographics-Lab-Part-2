@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/home")
 def render_response():
-    state = request.args["state"]
+    state = request.args["states"]
     return render_template('home.html')
 """def get_state_options():
     options = ""
