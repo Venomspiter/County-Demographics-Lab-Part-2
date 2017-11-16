@@ -15,8 +15,8 @@ def get_state_options():
     for c in counties
         if not c["State"] in state:
               state.append(c["State"])
-    for s in state:
-       options += Markup("<option value=\"" + s + "\">" + s + "</option>")
+    """for s in state:
+       options += Markup("<option value=\"" + s + "\">" + s + "</option>")"""
     return options
 """def your_interesting_demographic_function(stateName):
        return "hi"""
