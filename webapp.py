@@ -7,10 +7,10 @@ app = Flask(__name__)
 def render_response():
     state = request.args["states"]
     return render_template('home.html')
-"""def get_state_options():
+def get_state_options():
     options = ""
-       with open('county_demographics.json') as demographics_data:
-              counties = json.load(demographics_data)
+    with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)
     state = []
     for c in counties
         if not c["State"] in state:
@@ -18,7 +18,7 @@ def render_response():
     for s in state:
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
-def your_interesting_demographic_function(stateName):
+"""def your_interesting_demographic_function(stateName):
        return "hi"""
 
 @app.route("/")
