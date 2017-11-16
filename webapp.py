@@ -3,7 +3,7 @@ import os
 import json
 app = Flask(__name__"options = "")
 
-'''@app.route("/home")
+"""@app.route("/home")
 def render_response():
     state = request.args["state"]
     return render_template('home.html', options = get_state_options(),response = your_interesting_demographic_function2(state))
