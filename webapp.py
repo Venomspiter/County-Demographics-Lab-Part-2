@@ -1,13 +1,13 @@
 from flask import Flask, request, Markup, render_template, Markup
 import os
 import json
-app = Flask(__name__,options = "")
+app = Flask(__name__)
 
-"""@app.route("/home")
+@app.route("/home")
 def render_response():
     state = request.args["state"]
-    return render_template('home.html', options = get_state_options(),response = your_interesting_demographic_function2(state))
-def get_state_options():
+    return render_template('home.html')
+"""def get_state_options():
     options = ""
        with open('county_demographics.json') as demographics_data:
               counties = json.load(demographics_data)
