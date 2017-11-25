@@ -22,9 +22,8 @@ def your_interesting_demographic_function(stateName):
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
     for c in counties:
-        if c["State"] in stateName:
-               stateName.append(c["State"])
-    return ["Income"]
+        if c["State"] == stateName:
+            return c["State"]["Income"]
 @app.route("/")
 def render_main():
     return render_template('home.html',options = get_state_options())
