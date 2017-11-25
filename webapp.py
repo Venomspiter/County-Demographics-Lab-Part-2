@@ -19,11 +19,15 @@ def get_state_options():
        options += Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 def your_interesting_demographic_function(stateName):
-    with open('county_demographics.json') as demographics_data:
+    with open('county_demographics.json') as demographics_data: 
         counties = json.load(demographics_data)
-    for c in counties:
-        if c["State"] == stateName:
-            return c["State"]["Income"]
+        number = 0
+        total = 0
+        for c in counties:
+            if c["State"] == stateName:
+                total  += c["Income"]["Median Houseold Income"]
+                number+=1
+        return "The average household income income in"+stateName+"is"+(total/number)+"."
 @app.route("/")
 def render_main():
     return render_template('home.html',options = get_state_options())
