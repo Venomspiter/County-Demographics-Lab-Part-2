@@ -22,7 +22,7 @@ def your_interesting_demographic_function(stateName):
     with open('county_demographics.json') as demographics_data:
         counties = json.load(demographics_data)
     for c in counties:
-        if c["State"] in state:
+        if c["State"] in stateName:
                state.append(c["State"])
     return ["Income"]
 @app.route("/")
