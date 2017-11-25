@@ -27,7 +27,7 @@ def your_interesting_demographic_function(stateName):
             if c["State"] == stateName:
                 total  += c["Income"]["Median Houseold Income"]
                 number+=1
-        return "The average household income income in"+stateName+"is"+(total/number)+"."
+        return (total/number)
 @app.route("/")
 def render_main():
     return render_template('home.html',options = get_state_options())
